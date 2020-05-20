@@ -1,9 +1,9 @@
 import discord
 import asyncio
-
+import os
 client = discord.Client()
 
-token = "NzEyMTE2MDU1MTQ5MTE3NDYw.XsSGCw.jkHGOrc5Jim3dfJKz4Z31-CCtas"
+token = "NzEyMTE2MDU1MTQ5MTE3NDYw.XsSLCQ.xVn-CLTG9Glf9srj7WlIAZ_dQf8"
 
 @client.event
 async def on_ready():
@@ -25,8 +25,8 @@ async def on_message(message):
 
     if message.content == "야병신":
         await message.channel.send("왜병신")
-
-client.run(token)
+access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
 
 
 
